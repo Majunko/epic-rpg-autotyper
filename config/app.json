@@ -1,0 +1,13 @@
+{
+    "browser": {
+        "serverID": "646847371199905812",
+        "channelID": "855518376864120863",
+        "dataDir": "/home/apps/Descargas/Temp/basura"
+    },
+    "donatorPercent": 35,
+    "hardmode": true,
+    "currentArea": 12,
+    "switchHunt": false,
+    "countHuntsToHeal": 0,
+    "eventCooldownPorcent": 0
+}
