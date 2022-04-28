@@ -36,6 +36,22 @@ export function validateConfigFile(): Res {
     res.msg = `browser.channelID must be type 'string' in 'config/app.json'`;
   }
 
+  if (f.professions == undefined) {
+    res.status = false;
+    res.msg = `Professions key not found in 'config/app.json'`;
+  }
+
+  if (f.professions.worker == undefined) {
+    res.status = false;
+    res.msg = `professions.worker empty 'config/app.json'`;
+  } else if (typeof f.professions.worker != 'number') {
+    res.status = false;
+    res.msg = `professions.worker must be type 'number' in 'config/app.json'`;
+  } else if (f.professions.worker < 0) {
+    res.status = false;
+    res.msg = `professions.worker must be >= 0 in 'config/app.json'`;
+  }
+
   if (f.donatorPercent == undefined) {
     res.status = false;
     res.msg = `donatorPercent key not found in 'config/app.json'`;
@@ -59,12 +75,12 @@ export function validateConfigFile(): Res {
     }
   }
 
-  if (f.hardmode == undefined) {
+  if (f.ascended == undefined) {
     res.status = false;
-    res.msg = `hardmode key not found in 'config/app.json'`;
-  } else if (typeof f.hardmode != 'boolean') {
+    res.msg = `ascended key not found in 'config/app.json'`;
+  } else if (typeof f.ascended != 'boolean') {
     res.status = false;
-    res.msg = `hardmode value must be type 'boolean' in 'config/app.json'`;
+    res.msg = `ascended value must be type 'boolean' in 'config/app.json'`;
   }
 
   if (f.currentArea == undefined) {

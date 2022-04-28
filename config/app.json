@@ -4,9 +4,12 @@
         "channelID": "855518376864120863",
         "dataDir": "/home/apps/Descargas/Temp/basura"
     },
+    "professions":{
+        "worker": 102
+    },
+    "currentArea": 9,
+    "ascended": true,
     "donatorPercent": 35,
-    "hardmode": true,
-    "currentArea": 12,
     "switchHunt": false,
     "countHuntsToHeal": 0,
     "eventCooldownPorcent": 0

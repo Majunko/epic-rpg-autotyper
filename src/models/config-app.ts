@@ -4,8 +4,11 @@ export interface ConfigAppModel {
     channelID: string | number;
     dataDir: string;
   };
+  professions: {
+    worker: number;
+  };
   donatorPercent: number;
-  hardmode: boolean;
+  ascended: boolean;
   currentArea: number;
   switchHunt: boolean;
   countHuntsToHeal: number;

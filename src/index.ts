@@ -48,11 +48,59 @@ workTime = (workTime + plusSec) * 1000;
 farmTime = (farmTime + plusSec) * 1000;
 adventureTime = (adventureTime + plusSec) * 1000;
 
-let huntCommand = superTrim(`rpg hunt ${config.hardmode ? 'h' : ''} ${config.donatorPercent >= 35 ? 't' : ''}`);
+let huntCommand = superTrim(`rpg hunt ${config.ascended ? 'h' : ''} ${config.donatorPercent >= 35 ? 't' : ''}`);
 // prettier-ignore
-const workCommand = superTrim(`rpg ${config.currentArea <= 11 ? 'dynamite' : 'chainsaw'}`);
+let workCommand = 'rpg dynamite';
 const farmCommand = 'rpg farm';
-const advCommand = superTrim(`rpg adv ${config.hardmode ? 'h' : ''}`);
+const advCommand = superTrim(`rpg adv ${config.ascended ? 'h' : ''}`);
+
+if (config.ascended) {
+  switch (config.currentArea) {
+    case 4:
+    case 5:
+      if (config.professions.worker >= 115) {
+        workCommand = 'rpg chainsaw';
+      }
+      break;
+
+    case 6:
+    case 7:
+      if (config.professions.worker >= 102) {
+        workCommand = 'rpg greenhouse';
+      }
+      break;
+
+    case 8:
+      if (config.professions.worker >= 109) {
+        workCommand = 'rpg chainsaw';
+      }
+      break;
+
+    case 9:
+      if (config.professions.worker >= 107) { 
+        workCommand = 'rpg greenhouse';
+      }
+      break;
+
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+      workCommand = 'rpg chainsaw';
+      break;
+
+    case 1:
+    case 2:
+    case 3:
+    case 10:
+    case 11:
+    default:
+      workCommand = 'rpg dynamite';
+      break;
+  }
+} else { // not ascended
+  workCommand = 'rpg chop';
+}
 
 // Useful
 let isHuntTogether = true;
@@ -95,10 +143,10 @@ const inputTextHTML = 'span[data-slate-node="text"]'; // Input where the user ty
   async function hunt() {
     if (config.switchHunt && config.donatorPercent > 0) {
       if (isHuntTogether) {
-        huntCommand = superTrim(`rpg hunt ${config.hardmode} ? h : '' t`);
+        huntCommand = superTrim(`rpg hunt ${config.ascended} ? h : '' t`);
         isHuntTogether = false;
       } else {
-        huntCommand = superTrim(`rpg hunt ${config.hardmode} ? h : ''`);
+        huntCommand = superTrim(`rpg hunt ${config.ascended} ? h : ''`);
         isHuntTogether = true;
       }
     }

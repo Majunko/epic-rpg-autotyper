@@ -8,6 +8,9 @@ import {
   queueScheduler,
   pipe,
   fromEvent,
+  concat,
+  timer,
+  mergeMap
 } from 'rxjs';
 import {
   delay,
@@ -17,6 +20,8 @@ import {
   concatMap,
   concatWith,
   tap,
+  repeat,
+  concatAll,
 } from 'rxjs/operators';
 
 let isInCommand = false;
@@ -39,6 +44,33 @@ let isInCommand = false;
     console.log('work');
     console.log('work.');
   }
+  const h = of('hunt');
+  const w = of('work');
+
+
+  // const timerHunt = timer(5000).pipe(
+  //   concatMap(() => h),
+  // );
+
+  // const timerWork = timer(10000).pipe(
+  //   concatMap(() => w),
+  // );
+
+  // const timerHunt = interval(5000).pipe(
+  //   concatMap(() => h)
+  // );
+
+  // const timerWork = interval(10000).pipe(
+  //   concatMap(() => w),
+  // );
+
+  // const res = concat(timerHunt, timerWork).pipe(take(1));
+
+  // res.subscribe(x => console.log(x));
+
+
+  // const c = concat(timerHunt, timerWork);
+  // c.subscribe(x => console.log(x));
 
   // const lista = of(1);
 
