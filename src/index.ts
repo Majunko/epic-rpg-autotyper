@@ -4,12 +4,6 @@ import { validateConfigFile, readConfigFile } from './util/config';
 import { printLogo } from './util/logo';
 import { superTrim } from './util/helpers';
 
-/*
- * El método pop() elimina el último elemento de un array y lo devuelve
- * El método shift() elimina el primer elemento del array y lo retorna. Este método modifica la longitud del array.
- * El método push() añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
- */
-
 const r = validateConfigFile();
 if (!r.status) {
   console.log(r.msg);
@@ -150,7 +144,7 @@ const inputTextHTML = 'span[data-slate-node="text"]'; // Input where the user ty
         isHuntTogether = true;
       }
     }
-    // isInCommand = true;
+
     await page.type(inputTextHTML, huntCommand);
     await page.keyboard.press('Enter');
     if (config.countHuntsToHeal > 0) {

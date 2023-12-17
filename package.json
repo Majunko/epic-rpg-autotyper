@@ -1,32 +1,26 @@
 {
   "name": "erpg-autotyper",
   "version": "1.0.0",
-  "description": "",
+  "description": "An automated bot to type commands in Epic RPG on Discord",
   "type": "module",
   "scripts": {
-    "build": "rm -rf build && tsc -p tsconfig.json",
-    "start": "node --es-module-specifier-resolution=node ./build/index.js",
-    "testjs": "node --es-module-specifier-resolution=node ./build/test.js",
-    "develop": "npm run build && concurrently \"tsc -p tsconfig.json -w\" \"supervisor -w ./build,./config -e js,json --no-restart-on error\""
+    "build": "rm -rf build && tsc -p tsconfig.json --removeComments",
+    "start": "node --import=extensionless/register ./build/index.js",
+    "develop": "rm -rf build && concurrently \"tsc -p tsconfig.json -w\" \"supervisor -w ./build,./config -e js,json --no-restart-on error\"",
+    "testjs": "node --import=extensionless/register ./build/test.js"
   },
   "private": true,
   "keywords": [],
   "author": "Majunko",
   "license": "MIT",
-  "devDependencies": {
-    "@tsconfig/node16": "^1.0.2",
-    "@types/node": "^17.0.23",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "concurrently": "^7.0.0",
-    "eslint": "^8.12.0",
-    "eslint-config-google": "^0.14.0",
-    "supervisor": "^0.12.0",
-    "typescript": "^4.6.3"
-  },
   "dependencies": {
-    "chalk": "^5.0.1",
-    "puppeteer": "^13.5.1",
-    "rxjs": "^7.5.5"
+    "chalk": "^5.3.0",
+    "extensionless": "^1.9.6",
+    "puppeteer": "^21.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "supervisor": "^0.12.0",
+    "typescript": "^5.3.3"
   }
 }

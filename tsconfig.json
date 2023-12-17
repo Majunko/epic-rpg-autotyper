@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "es2020",
-    "target": "es2015",
+    "target": "es2021",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,15 +11,12 @@
     "forceConsistentCasingInFileNames": true,
     "rootDir": "src",
     "outDir": "./build",
-    "sourceMap": true,
+    "baseUrl": ".",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "importHelpers": true
   },
   "include": [
     "src/**/*"
   ],
+  "exclude": ["node_modules", ".vscode"]
 }
