@@ -1,16 +1,18 @@
 {
     "browser": {
-        "serverID": "646847371199905812",
-        "channelID": "855518376864120863",
-        "dataDir": "/home/apps/Descargas/Temp/basura"
+        "serverID": "743929100766281828",
+        "channelID": "824443534714994698",
+        "dataDir": "D:\\Descargas\\Ferney\\basura"
     },
     "professions":{
         "worker": 102
     },
-    "currentArea": 9,
+    "currentArea": 3,
     "ascended": true,
-    "donatorPercent": 35,
+    "donatorPercent": 0,
     "switchHunt": false,
+    "isHuntTogether": false,
+    "numHunts": 0,
     "countHuntsToHeal": 0,
     "eventCooldownPorcent": 0
 }

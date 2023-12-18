@@ -17,7 +17,7 @@ export function validateConfigFile(): Res {
 
   if (f.browser == undefined) {
     res.status = false;
-    res.msg = `Browser key not found in 'config/app.json'`;
+    res.msg = `browser key not found in 'config/app.json'`;
   }
 
   if (f.browser.serverID == undefined || f.browser.serverID == '') {
@@ -38,7 +38,7 @@ export function validateConfigFile(): Res {
 
   if (f.professions == undefined) {
     res.status = false;
-    res.msg = `Professions key not found in 'config/app.json'`;
+    res.msg = `professions key not found in 'config/app.json'`;
   }
 
   if (f.professions.worker == undefined) {
@@ -99,17 +99,33 @@ export function validateConfigFile(): Res {
     res.msg = `switchHunt value must be type 'boolean' in 'config/app.json'`;
   }
 
+  if (f.isHuntTogether == undefined) {
+    res.status = false;
+    res.msg = `isHuntTogether key not found in in 'config/app.json'`;
+  } else if (typeof f.isHuntTogether != 'boolean') {
+    res.status = false;
+    res.msg = `isHuntTogether value must be type 'boolean' in 'config/app.json'`;
+  }
+
+  if (f.numHunts == undefined) {
+    res.status = false;
+    res.msg = `numHunts key not found in in 'config/app.json'`;
+  } else if (typeof f.numHunts != 'number') {
+    res.status = false;
+    res.msg = `numHunts value must be type 'number' in 'config/app.json'`;
+  }
+
   if (f.countHuntsToHeal == undefined) {
     res.status = false;
     res.msg = `countHuntsToHeal key not found in in 'config/app.json'`;
   } else if (typeof f.countHuntsToHeal != 'number') {
     res.status = false;
-    res.msg = `switchHunt value must be type 'boolean' in 'config/app.json'`;
+    res.msg = `countHuntsToHeal value must be type 'number' in 'config/app.json'`;
   }
 
   if (f.eventCooldownPorcent == undefined) {
     res.status = false;
-    res.msg = `countHuntsToHeal key not found in in 'config/app.json'`;
+    res.msg = `eventCooldownPorcent key not found in in 'config/app.json'`;
   } else if (typeof f.eventCooldownPorcent != 'number') {
     res.status = false;
     res.msg = `eventCooldownPorcent value must be type 'number' in 'config/app.json'`;

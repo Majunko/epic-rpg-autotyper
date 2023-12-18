@@ -11,6 +11,8 @@ export interface ConfigAppModel {
   ascended: boolean;
   currentArea: number;
   switchHunt: boolean;
+  isHuntTogether: boolean;
+  numHunts: number;
   countHuntsToHeal: number;
   eventCooldownPorcent: number;
 }

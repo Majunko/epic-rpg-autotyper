@@ -1,13 +1,13 @@
 {
   "name": "erpg-autotyper",
   "version": "1.0.0",
-  "description": "An automated bot to type commands in Epic RPG on Discord",
+  "description": "An automated script to type commands on Discord for Epic RPG bot",
   "type": "module",
   "scripts": {
     "build": "rm -rf build && tsc -p tsconfig.json --removeComments",
     "start": "node --import=extensionless/register ./build/index.js",
     "develop": "rm -rf build && concurrently \"tsc -p tsconfig.json -w\" \"supervisor -w ./build,./config -e js,json --no-restart-on error\"",
-    "testjs": "node --import=extensionless/register ./build/test.js"
+    "test": "node --import=extensionless/register ./build/test.js"
   },
   "private": true,
   "keywords": [],
