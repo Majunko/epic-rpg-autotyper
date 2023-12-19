@@ -5,9 +5,9 @@ const config = readConfigFile();
 
 const BASE_URL = config.browser.url;
 
-export async function runBrowser(headless = false) {
+export async function runBrowser(headless = true) {
   const browser = await puppeteer.launch({
-    headless: headless ? true : 'new',
+    headless: headless ? 'new' : false,
     defaultViewport: null,
     // args: [
     //     '--start-maximized'
@@ -17,15 +17,17 @@ export async function runBrowser(headless = false) {
 
   const page = await browser.newPage();
   await page.goto(`${BASE_URL}/app`, { waitUntil: 'networkidle2' });
-  await page.waitForXPath('//div[contains(text(), "Nitro")]');
-  const CHANNELS_URL = `${BASE_URL}/channels/${config.browser.serverID}/${config.browser.channelID}`;
-  await page.goto(CHANNELS_URL, {});
 
   const url = await page.url();
-  if (url.includes('login')) {
+
+  if (url.includes('login') && headless) {
     await browser.close();
     return {success: false, page};
   }
+
+  await page.waitForXPath('//div[contains(text(), "Nitro")]');
+  const CHANNELS_URL = `${BASE_URL}/channels/${config.browser.serverID}/${config.browser.channelID}`;
+  await page.goto(CHANNELS_URL, {});
 
   await page.evaluate(() =>
     document.getElementsByClassName('expression-picker-chat-input-button')
