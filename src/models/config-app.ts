@@ -1,8 +1,10 @@
 export interface ConfigAppModel {
   browser: {
+    url: string;
     serverID: string | number;
     channelID: string | number;
     dataDir: string;
+    inputTextHTML: string;
   };
   professions: {
     worker: number;

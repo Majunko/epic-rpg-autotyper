@@ -1,18 +1,20 @@
 {
-    "browser": {
-        "serverID": "743929100766281828",
-        "channelID": "824443534714994698",
-        "dataDir": "D:\\Descargas\\Ferney\\basura"
-    },
-    "professions":{
-        "worker": 102
-    },
-    "currentArea": 3,
-    "ascended": true,
-    "donatorPercent": 0,
-    "switchHunt": false,
-    "isHuntTogether": false,
-    "numHunts": 0,
-    "countHuntsToHeal": 0,
-    "eventCooldownPorcent": 0
+  "browser": {
+    "url": "https://discord.com",
+    "serverID": "743929100766281828",
+    "channelID": "824443534714994698",
+    "dataDir": "D:\\Descargas\\Ferney\\basura",
+    "inputTextHTML": "span[data-slate-node=\"text\"]"
+  },
+  "professions":{
+    "worker": 102
+  },
+  "currentArea": 3,
+  "ascended": true,
+  "donatorPercent": 0,
+  "switchHunt": false,
+  "isHuntTogether": false,
+  "numHunts": 0,
+  "countHuntsToHeal": 0,
+  "eventCooldownPorcent": 0
 }
