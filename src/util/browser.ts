@@ -4,10 +4,10 @@ import { readConfigFile } from './config';
 const config = readConfigFile();
 
 const BASE_URL = config.browser.url;
+const wsChromeEndpointurl = config.browser.wsChromeEndpointurl;
 
 export async function runBrowser(headless = true) {
   // --remote-debugging-port=9222
-  const wsChromeEndpointurl = 'ws://127.0.0.1:9222/devtools/browser/239369b6-71bd-4529-8c3a-cd00ddf2a7a4';
   const browser = await puppeteer.connect({
     browserWSEndpoint: wsChromeEndpointurl,
     defaultViewport: null,

@@ -5,6 +5,7 @@ export interface ConfigAppModel {
     channelID: string | number;
     dataDir: string;
     inputTextHTML: string;
+    wsChromeEndpointurl: string;
   };
   professions: {
     worker: number;

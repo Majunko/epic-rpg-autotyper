@@ -37,6 +37,12 @@ export function validateConfigFile() {
     res.push(`browser.inputTextHTML must be type 'string' in 'config/app.json'`);
   }
 
+  if (f.browser.wsChromeEndpointurl == undefined || f.browser.wsChromeEndpointurl == '') {
+    res.push(`browser.wsChromeEndpointurl empty 'config/app.json'`);
+  } else if (typeof f.browser.wsChromeEndpointurl != 'string') {
+    res.push(`browser.wsChromeEndpointurl must be type 'string' in 'config/app.json'`);
+  }
+
   if (f.professions == undefined) {
     res.push(`professions key not found in 'config/app.json'`);
   }

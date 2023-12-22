@@ -4,7 +4,8 @@
     "serverID": "743929100766281828",
     "channelID": "824443534714994698",
     "dataDir": "D:\\Descargas\\Ferney\\basura",
-    "inputTextHTML": "span[data-slate-node=\"text\"]"
+    "inputTextHTML": "span[data-slate-node=\"text\"]",
+    "wsChromeEndpointurl": "ws://127.0.0.1:9222/devtools/browser/f4924c82-321a-40c8-a6eb-b13a00378ebe"
   },
   "professions":{
     "worker": 102
@@ -16,5 +17,5 @@
   "isHuntTogether": false,
   "numHunts": 0,
   "countHuntsToHeal": 0,
-  "eventCooldownPorcent": 10
+  "eventCooldownPorcent": 0
 }
