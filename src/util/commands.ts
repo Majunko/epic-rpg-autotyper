@@ -3,12 +3,10 @@ import { superTrim } from './helpers';
 import { Page } from 'puppeteer';
 
 // -------- Time --------
-export const plusSec = 2;
-
-export let huntTime = 60;
-export let workTime = 300;
-export let farmTime = 600;
-export let adventureTime = 3600;
+export let huntTime = 60 + 2;
+export let workTime = 300 + 2;
+export let farmTime = 600 + 2;
+export let adventureTime = 3600 + 2;
 // ----------------------
 
 // ------ Commands ------
@@ -58,10 +56,10 @@ export function setCommandsTime(config: ConfigAppModel) {
     adventureTime = adventureTime - (adventureTime * config.eventCooldownPorcent) / 100;
   }
 
-   huntTime = (huntTime + plusSec) * 1000;
-   workTime = (workTime + plusSec) * 1000;
-   farmTime = (farmTime + plusSec) * 1000;
-   adventureTime = (adventureTime + plusSec) * 1000;
+   huntTime = huntTime * 1000;
+   workTime = workTime * 1000;
+   farmTime = farmTime * 1000;
+   adventureTime = adventureTime * 1000;
 }
 
 export function setCommands(config: ConfigAppModel) {

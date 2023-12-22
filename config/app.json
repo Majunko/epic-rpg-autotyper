@@ -16,5 +16,5 @@
   "isHuntTogether": false,
   "numHunts": 0,
   "countHuntsToHeal": 0,
-  "eventCooldownPorcent": 0
+  "eventCooldownPorcent": 10
 }
