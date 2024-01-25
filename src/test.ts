@@ -1,4 +1,4 @@
-import { queueCommand } from './util/queue';
+import { queueCommand } from './util/queue.js';
 import * as readline from 'readline';
 
 // Hacer que el proceso.stdin sea un stream de teclas

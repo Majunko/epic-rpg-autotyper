@@ -1,4 +1,4 @@
-import { sleep, getCurrentTime } from './helpers';
+import { sleep, getCurrentTime } from './helpers.js';
 
 /**
  * Implementation of Queue

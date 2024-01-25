@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "es2020",
-    "target": "es2021",
+    "module": "node16",
+    "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -12,11 +12,10 @@
     "rootDir": "src",
     "outDir": "./build",
     "baseUrl": ".",
-    "moduleResolution": "node",
+    "removeComments": true,
+    "moduleResolution": "node16",
     "importHelpers": true
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", ".vscode"]
 }

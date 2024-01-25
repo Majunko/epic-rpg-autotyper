@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import fs from 'fs';
-import {ConfigAppModel} from '../models/config-app';
+import {ConfigAppModel} from '../models/config-app.js';
 
 /**
  * Validate config/app.json

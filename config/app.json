@@ -1,11 +1,11 @@
 {
   "browser": {
     "url": "https://discord.com",
-    "serverID": "743929100766281828",
-    "channelID": "824443534714994698",
+    "serverID": "646847371199905812",
+    "channelID": "855518376864120863",
     "dataDir": "D:\\Descargas\\Ferney\\basura",
     "inputTextHTML": "span[data-slate-node=\"text\"]",
-    "wsChromeEndpointurl": "ws://127.0.0.1:9222/devtools/browser/f4924c82-321a-40c8-a6eb-b13a00378ebe"
+    "wsChromeEndpointurl": "ws://localhost:9222/devtools/browser/2682ae5e-ce11-4c02-b42c-19700896cfe7"
   },
   "professions":{
     "worker": 102

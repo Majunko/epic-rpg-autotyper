@@ -1,5 +1,5 @@
-import { ConfigAppModel } from '../models/config-app';
-import { superTrim } from './helpers';
+import { ConfigAppModel } from '../models/config-app.js';
+import { superTrim } from './helpers.js';
 import { Page } from 'puppeteer';
 
 // -------- Time --------
@@ -101,6 +101,11 @@ export function setCommands(config: ConfigAppModel) {
       case 13:
       case 14:
       case 15:
+      case 16:
+      case 17:
+      case 18:
+      case 19:
+      case 20:
         workCommand = 'rpg chainsaw';
         break;
 

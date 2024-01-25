@@ -1,8 +1,8 @@
-import { validateConfigFile, readConfigFile } from './util/config';
-import { superTrim, printLogo } from './util/helpers';
-import * as cm from './util/commands';
-import { queueCommand } from './util/queue';
-import { runBrowser } from './util/browser';
+import { validateConfigFile, readConfigFile } from './util/config.js';
+import { printLogo } from './util/helpers.js';
+import * as cm from './util/commands.js';
+import { queueCommand } from './util/queue.js';
+import { runBrowser } from './util/browser.js';
 
 const r = validateConfigFile();
 if (r.length > 0) {

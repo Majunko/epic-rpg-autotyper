@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import { readConfigFile } from './config';
+import { readConfigFile } from './config.js';
 
 const config = readConfigFile();
 
