@@ -32,10 +32,13 @@ printLogo();
 
   console.debug('Auto typer started ' + new Date());
 
+  // setTimeout(() => queueCommand(hunt), cm.huntTime);
+
   setInterval(() => queueCommand(hunt), cm.huntTime);
   setInterval(() => queueCommand(work), cm.workTime); // (3m 15s)
   setInterval(() => queueCommand(farm), cm.farmTime);
   setInterval(() => queueCommand(adventure), cm.adventureTime); // (39m)
+  setInterval(() => queueCommand(eventCmd), cm.eventTime);
 
   /**
    * Execute hunt command
@@ -67,6 +70,11 @@ printLogo();
    */
   async function adventure() {
     await page.type(inputTextHTML, cm.advCommand);
+    await page.keyboard.press('Enter');
+  }
+
+  async function eventCmd() {
+    await page.type(inputTextHTML, cm.eventCommand);
     await page.keyboard.press('Enter');
   }
 })();

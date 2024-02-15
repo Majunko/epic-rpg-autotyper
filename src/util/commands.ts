@@ -3,10 +3,11 @@ import { superTrim } from './helpers.js';
 import { Page } from 'puppeteer';
 
 // -------- Time --------
-export let huntTime = 60 + 2;
-export let workTime = 300 + 2;
-export let farmTime = 600 + 2;
-export let adventureTime = 3600 + 2;
+export let huntTime = 60;
+export let workTime = 300;
+export let farmTime = 600;
+export let adventureTime = 3600;
+export let eventTime = 44;
 // ----------------------
 
 // ------ Commands ------
@@ -14,6 +15,7 @@ export let huntCommand = '';
 export let workCommand = '';
 export let farmCommand = '';
 export let advCommand = '';
+export let eventCommand = '';
 // ----------------------
 
 export function setSwitchHuntAndDonator(config: ConfigAppModel) {
@@ -56,10 +58,11 @@ export function setCommandsTime(config: ConfigAppModel) {
     adventureTime = adventureTime - (adventureTime * config.eventCooldownPorcent) / 100;
   }
 
-   huntTime = huntTime * 1000;
-   workTime = workTime * 1000;
-   farmTime = farmTime * 1000;
-   adventureTime = adventureTime * 1000;
+   huntTime = (huntTime + 2) * 1000;
+   workTime = (workTime + 2) * 1000;
+   farmTime = (farmTime + 2) * 1000;
+   adventureTime = (adventureTime + 2) * 1000;
+   eventTime = (eventTime + 2) * 1000;
 }
 
 export function setCommands(config: ConfigAppModel) {
@@ -68,6 +71,7 @@ export function setCommands(config: ConfigAppModel) {
   workCommand = 'rpg dynamite';
   farmCommand = 'rpg farm';
   advCommand = superTrim(`rpg adv ${config.ascended ? 'h' : ''}`);
+  eventCommand = 'rpg love share <@367045458973163523>';
 
   if (config.ascended) {
     switch (config.currentArea) {

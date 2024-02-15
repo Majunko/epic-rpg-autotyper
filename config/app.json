@@ -3,7 +3,7 @@
     "url": "https://discord.com",
     "serverID": "646847371199905812",
     "channelID": "855518376864120863",
-    "dataDir": "D:\\Descargas\\Ferney\\basura",
+    "dataDir": "/home/majunko/Downloads/basura",
     "inputTextHTML": "span[data-slate-node=\"text\"]",
     "wsChromeEndpointurl": "ws://localhost:9222/devtools/browser/2682ae5e-ce11-4c02-b42c-19700896cfe7"
   },
