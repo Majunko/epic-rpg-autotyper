@@ -117,6 +117,18 @@ export function validateConfigFile() {
     res.push(`eventCooldownPorcent value must be type 'number' in 'config/app.json'`);
   }
 
+  if (f.useEventCommand == undefined) {
+    res.push(`useEventCommand key not found in in 'config/app.json'`);
+  } else if (typeof f.useEventCommand != 'boolean') {
+    res.push(`useEventCommand value must be type 'boolean' in 'config/app.json'`);
+  }
+
+  if (f.useRandomTimer == undefined) {
+    res.push(`useRandomTimer key not found in in 'config/app.json'`);
+  } else if (typeof f.useRandomTimer != 'boolean') {
+    res.push(`useRandomTimer value must be type 'boolean' in 'config/app.json'`);
+  }
+
   return res;
 }
 

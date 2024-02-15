@@ -18,4 +18,6 @@ export interface ConfigAppModel {
   numHunts: number;
   countHuntsToHeal: number;
   eventCooldownPorcent: number;
+  useEventCommand: boolean;
+  useRandomTimer: boolean; // Use random delay for every command 5-20s
 }

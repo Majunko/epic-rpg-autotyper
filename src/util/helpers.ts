@@ -24,6 +24,12 @@ export const sleep = (ms: number) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 
+export const randomDelay = (baseDelay: number) => {
+  const variationMin = 5000;
+  const variationMax = 20000;
+  return baseDelay + Math.floor((Math.random() * (variationMax - variationMin + 1)) + variationMin);
+}
+
 export const printLogo = () =>  {
   return console.log(chalk.hex('#13A10E')(`
     ██████╗ ██████╗  ██████╗
