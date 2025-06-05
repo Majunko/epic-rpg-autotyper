@@ -1,9 +1,9 @@
 {
   "browser": {
     "url": "https://discord.com",
-    "serverID": "646847371199905812",
-    "channelID": "855518376864120863",
-    "dataDir": "/home/majunko/Downloads/basura",
+    "serverID": "",
+    "channelID": "",
+    "dataDir": "",
     "inputTextHTML": "span[data-slate-node=\"text\"]",
     "wsChromeEndpointurl": "ws://localhost:9222/devtools/browser/9fc881af-d6b6-486b-ac73-779e773a2cc3"
   },

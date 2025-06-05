@@ -33,7 +33,7 @@ export async function runBrowser(headless = true) {
   //   return {success: false, page};
   // }
 
-  await page.waitForXPath('//div[contains(text(), "Nitro")]', {timeout: 90_000});
+  await page.waitForSelector('xpath///div[contains(text(), "Nitro")]', {timeout: 90_000});
   const CHANNELS_URL = `${BASE_URL}/channels/${config.browser.serverID}/${config.browser.channelID}`;
   await page.goto(CHANNELS_URL, {});
 
